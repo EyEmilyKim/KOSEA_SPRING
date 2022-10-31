@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="computer" class="sample3.Computer">
+		<property name="name" value="삼성 컴퓨터"></property>
+	</bean>
+	<bean id="notebook" class="sample3.Notebook">
+		<property name="name" value="LG 노트북"></property>
+	</bean>
+	<bean id="danaka" class="sample3.Danaka">
+		<property name="name" value="다나까"></property>
+		<property name="item" ref="computer"></property>
+	</bean>
+	<bean id="gobayasi" class="sample3.Gobayasi">
+		<property name="name" value="고바야시"></property>
+		<property name="item" ref="notebook"></property>
+	</bean>
+	<bean id="suzuki" class="sample3.Suzuki">
+		<constructor-arg value="스즈키"></constructor-arg>
+		<property name="item" ref="computer"></property>
+	</bean>
+</beans>
