@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- DB 연동을 위한 SqlSession 객체 관련 설정 //시작 -->	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		p:driverClassName="oracle.jdbc.OracleDriver"
+		p:url="jdbc:oracle:thin:@//localhost:1521/XE"
+		p:username="hr"
+		p:password="hr"></bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
+		p:configLocation="classpath:myBatisConfig.xml" 
+		p:dataSource-ref="dataSource"></bean>
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory"></constructor-arg>
+	</bean>
+<!-- DB 연동을 위한 SqlSession 객체 관련 설정 //끝 -->		
+	<bean id="itemDao" class="DAO.ItemDAOimpl" p:ss-ref="sqlSession"></bean>
+	<bean id="menuUi" class="ui.MenuUI" p:itemDao-ref="itemDao"></bean>
+</beans>
