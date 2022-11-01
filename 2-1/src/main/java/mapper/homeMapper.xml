@@ -2,4 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.home">
+<select id="getItems" resultType="model.Item">
+select code, name, price, to_char(reg_date,'YYYY-MM-DD') "reg_date", info 
+from mysweet_items
+</select>
 </mapper>

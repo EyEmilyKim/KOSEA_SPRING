@@ -1,8 +1,8 @@
 package model;
 
 public class Item {
-	private Integer seqno;//일련번호
-	private String id;//계정
+	private Integer seqno;
+	private String id;
 	public Integer getSeqno() {
 		return seqno;
 	}
@@ -15,8 +15,8 @@ public class Item {
 	public void setId(String id) {
 		this.id = id;
 	}
-	private Integer num;//갯수
-	private Integer sum;//합계
+	private Integer num;
+	private Integer sum;
 	private String code;
 	private String name;
 	private Integer price;
