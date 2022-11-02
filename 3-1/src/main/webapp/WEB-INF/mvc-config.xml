@@ -29,13 +29,23 @@
 	<bean id="itemDao" class="DAO.ItemDAOimpl" p:session-ref="sqlSession"></bean>
 	<bean id="indexController" class="controller.IndexController"
 		 p:itemDao-ref="itemDao" name="/index.html"></bean>
+	<bean id="detailController" class="controller.DetailController"
+		p:item-ref="itemDao"></bean>	 
+	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+				/index.html = indexController
+				/detail.html = detailController
+			</value>
+		</property>
+	</bean>
 	
-    <mvc:annotation-driven />
+<!--     <mvc:annotation-driven /> -->
 
-	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	        Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp'
-	        <property name="prefix" value="/WEB-INF/view/"/>
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!-- Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->
+	        <property name="prefix" value="/WEB-INF/jsp/"/>
 	        <property name="suffix" value=".jsp"/>
-	</bean> -->
+	</bean>
 
 </beans>

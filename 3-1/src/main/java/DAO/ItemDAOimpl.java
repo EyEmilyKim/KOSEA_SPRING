@@ -15,4 +15,8 @@ public class ItemDAOimpl implements ItemDAO {
 		return session.selectList("mapper.home.getItems"); //매퍼이름.쿼리이름
 	}
 
+	public Item findById(Integer id) {
+		return session.selectOne("mapper.home.getItem", id);
+	}
+
 }

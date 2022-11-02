@@ -19,7 +19,8 @@
 		<c:forEach items="${itemList }" var="item">
 		<tr class="record">
 			<td align="center">${item.itemId }</td>
-			<td align="center">${item.itemName }</td>
+			<td align="center">
+				<a href="detail.html?itemId=${item.itemId }">${item.itemName }</a></td>
 			<td align="center">${item.price }</td></tr>
 		</c:forEach>
 	</table>

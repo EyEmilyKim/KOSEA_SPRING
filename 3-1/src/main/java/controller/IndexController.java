@@ -21,7 +21,7 @@ public class IndexController implements Controller {
 		ModelAndView mav = new ModelAndView();
 		List<Item> list = itemDao.findAll();
 		mav.addObject("itemList",list); //DB 조회결과를 ModelAndView에 저장.
-		mav.setViewName("/WEB-INF/jsp/index.jsp"); //JSP 이름을 ModelAndView에 저장.
+		mav.setViewName("index"); //JSP 이름을 ModelAndView에 저장.(viewResolver에서 세부경로&확장자 보완)
 		return mav;
 	} //이 메서드는 콜백메서드(자동으로 호출되는 메서드)이다. 
 
