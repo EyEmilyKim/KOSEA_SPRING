@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.home">
+<select id="getUser" parameterType="model.User" resultType="model.User">
+select id as userId, pwd as password, name as userName, addr as address, 
+tel, gender, email, job 
+from mysweet_users 
+where id = #{userId} and pwd = #{password}
+</select>
+</mapper>
