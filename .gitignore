@@ -39,6 +39,18 @@ local.properties
 .target
 target/
 
+
+## (개발자 추가) target folder at the top level of the project structue and paths and contents underneath it
+target/
+#target/*
+
+## (개발자 추가) target folder at any level of the project structue
+#**/target/
+#*/target/
+#/target/
+
+
+
 # Tern plugin
 .tern-project
 
@@ -60,9 +72,13 @@ target/
 .scala_dependencies
 .worksheet
 
-# Uncomment this line if you wish to ignore the project description file.
+# (개발자 해제) Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
-#.project
+.project
+
+# (개발자 추가) and this, as well
+.classpath
+/Servers/
 
 ### Eclipse Patch ###
 # Spring Boot Tooling
