@@ -29,6 +29,9 @@ public class UserEntryValidator implements Validator {
 		if(! StringUtils.hasLength(user.getEmail())) {
 			errors.rejectValue("email", "error.required.user");
 		}
+		if(! StringUtils.hasLength(user.getTel())) {
+			errors.rejectValue("tel", "error.required.user");
+		}
 		if(! StringUtils.hasLength(user.getBirthday())) {
 			errors.rejectValue("birthday", "error.required.user");
 		}

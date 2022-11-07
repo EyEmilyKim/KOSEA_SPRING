@@ -1,23 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <div align="center" class="body">
-<h2>È¸¿ø °¡ÀÔ ¿Ï·á È­¸é</h2>
-<b><font color="red">°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù~</font></b>
+<h2>íšŒì› ê°€ì… ì™„ë£Œ í™”ë©´</h2>
+<b><font color="red">ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤~</font></b>
 <table>
-	<tr height="40px"><th>°¡ÀÔÀÚID</th><td>${user.userId }</td></tr>
-	<tr height="40px"><th>¾Ï È£</th><td>${user.password }</td></tr>
-	<tr height="40px"><th>ÀÌ ¸§</th><td>${user.userName }</td></tr>
-	<tr height="40px"><th>ÁÖ ¼Ò</th><td>${user.address }</td></tr>
-	<tr height="40px"><th>ÀÌ¸ŞÀÏ</th><td>${user.email }</td></tr>
-	<tr height="40px"><th>Á÷ ¾÷</th><td>${user.job }</td></tr>
-	<tr height="40px"><th>»ı³â¿ùÀÏ</th><td>${user.birthday }</td></tr>
+	<tr height="40px"><th>ê°€ì…ìID</th><td>${user.userId }</td></tr>
+	<tr height="40px"><th>ì•” í˜¸</th><td>${user.password }</td></tr>
+	<tr height="40px"><th>ì´ ë¦„</th><td>${user.userName }</td></tr>
+	<tr height="40px"><th>ì£¼ ì†Œ</th><td>${user.address }</td></tr>
+	<tr height="40px"><th>ì´ë©”ì¼</th><td>${user.email }</td></tr>
+	<tr height="40px"><th>ì§ ì—…</th><td>${user.job }</td></tr>
+	<tr height="40px"><th>ìƒë…„ì›”ì¼</th><td>${user.birthday }</td></tr>
 </table>
 </div>
 </body>

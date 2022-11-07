@@ -1,19 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <div align="center" class="body">
-<h2>х╦©Ь ╟║ют</h2>
+<h2>М ▄Л⌡░ Й╟─Л·┘</h2>
 <form:form modelAttribute="user" method="post" action="userEntry.html">
-<spring:hasBindErrors name="">
+<spring:hasBindErrors name="user">
 	<font color="red">
 		<c:forEach items="${errors.globalErrors }" var="err">
 			<spring:message code="${err.code }"/>
@@ -21,37 +21,43 @@
 	</font>
 </spring:hasBindErrors>
 <table>
-	<tr height="40px"><th>╟║ютюзID</th>
+	<tr height="40px"><th>Й╟─Л·┘Л·░ID</th>
 		<td><form:input path="userId" maxlength="20" cssClass="userId"/>
 			<font color="red"><form:errors path="userId"/></font></td></tr>
-	<tr height="40px"><th>╬о хё</th>
+	<tr height="40px"><th>Л∙■ М≤╦</th>
 		<td><form:password path="password" maxlength="20" cssClass="password"/>
 			<font color="red"><form:errors path="password"/></font></td></tr>
-	<tr height="40px"><th>юл ╦╖</th>
+	<tr height="40px"><th>Л²╢ К╕└</th>
 		<td><form:input path="userName" maxlength="30" cssClass="userName"/>
 			<font color="red"><form:errors path="userName"/></font></td></tr>
-	<tr height="40px"><th>аж ╪р</th>
+	<tr height="40px"><th>Лё╪ Л├▄</th>
 		<td><form:input path="address" maxlength="50" cssClass="address"/>
 			<font color="red"><form:errors path="address"/></font></td></tr>
-	<tr height="40px"><th>юл╦чюо</th>
+	<tr height="40px"><th>Л²╢К╘■Л²╪</th>
 		<td><form:input path="email" maxlength="50" cssClass="email"/>
 			<font color="red"><form:errors path="email"/></font></td></tr>
-	<tr height="40px"><th>аВ ╬В</th>
+	<tr height="40px"><th>Л═└М≥■К╡┬М≤╦</th>
+		<td><form:input path="tel" maxlength="20" cssClass="tel"/>
+			<font color="red"><form:errors path="tel"/></font></td></tr>
+	<tr height="40px"><th>Л└╠ КЁ└</th>
+		<td><form:radiobutton path="gender" value="M" checked="checked"/>К┌╗,
+			<form:radiobutton path="gender" value="F"/>Л≈╛</td></tr>
+	<tr height="40px"><th>Л╖│ Л≈┘</th>
 		<td><form:select path="job" cssClass="job">
-				<form:option value="х╦╩Г©Ь" label="х╦╩Г©Ь"/>
-				<form:option value="гп╩Щ" label="гп╩Щ"/>
-				<form:option value="аж╨н" label="аж╨н"/>
-				<form:option value="╠Бе╦" label="╠Бе╦"/>
+				<form:option value="М ▄Л┌╛Л⌡░" label="М ▄Л┌╛Л⌡░"/>
+				<form:option value="М∙≥Л┐²" label="М∙≥Л┐²"/>
+				<form:option value="Лё╪К╤─" label="Лё╪К╤─"/>
+				<form:option value="Й╦╟М┐─" label="Й╦╟М┐─"/>
 			</form:select></td></tr>
-	<tr height="40px"><th>╩ЩЁБ©Ыюо</th>
+	<tr height="40px"><th>Л┐²К┘└Л⌡■Л²╪</th>
 		<td><form:input path="birthday" maxlength="10" cssClass="birthday"/>
 			<font color="red"><form:errors path="birthday"/></font></td></tr>
 </table>
 <table>
 	<tr><td height="40px" align="center">
-		<input type="submit" value="х╦©Ь╟║ют"/></td>
+		<input type="submit" value="М ▄Л⌡░Й╟─Л·┘"/></td>
 		<td height="40px" align="center">
-		<input type="reset" value="цК ╪р"/></td></tr>
+		<input type="reset" value="Л╥╗ Л├▄"/></td></tr>
 </table>
 </form:form>
 </div>
