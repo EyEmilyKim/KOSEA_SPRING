@@ -4,10 +4,10 @@
 <div align="center">
 <table class="header">
 	<tr><td width="160"><a href="">■ 목록으로 돌아가기</a></td>
-	<tr><td width="160"><a href="">■ 계산하러 가기</a></td>
-	<tr><td width="160"><a href="">■ 카트 확인하기</a></td>
-	<tr><td width="160"><a href="">■ 카트 비우기</a></td>
-	<tr><td width="160">
+		<td width="160"><a href="">■ 계산하러 가기</a></td>
+		<td width="160"><a href="">■ 카트 확인하기</a></td>
+		<td width="160"><a href="">■ 카트 비우기</a></td>
+		<td width="160">
 			<c:choose>
 				<c:when test="${ not empty loginUser }">
 					<font color="red">환영합니다~ <br/>
@@ -20,5 +20,6 @@
 					</font>
 				</c:when>
 			</c:choose>
+		</td></tr>	
 </table>
 </div>

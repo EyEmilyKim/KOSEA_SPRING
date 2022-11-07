@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>°úÀÏ ¸ñ·Ï È­¸é</title>
+<meta charset="UTF-8">
+<title>ê³¼ì¼ ëª©ë¡ í™”ë©´</title>
 <link rel="stylesheet" type="text/css" href="css/3-5.css">
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/menu_header.jsp" %>
 <div align="center" class="body">
-	<h2>°úÀÏ ¸ñ·Ï È­¸é</h2>
+	<h2>ê³¼ì¼ ëª©ë¡ í™”ë©´</h2>
 	<table border="1">
 		<tr class="header">
-			<th align="center" width="80">»óÇ°¹øÈ£</th>
-			<th align="center" width="320">»óÇ°ÀÌ¸§</th>
-			<th align="center" width="100">°¡ °Ý</th></tr>
+			<th align="center" width="80">ìƒí’ˆë²ˆí˜¸</th>
+			<th align="center" width="320">ìƒí’ˆì´ë¦„</th>
+			<th align="center" width="100">ê°€ ê²©</th></tr>
 		<c:forEach items="${itemList }" var="item">
 		<tr class="record">
 			<td align="center">${item.itemId }</td>
