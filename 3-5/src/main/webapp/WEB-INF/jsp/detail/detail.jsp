@@ -5,9 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>과일 상세 정보</title>
-<link rel="styleshiie" type="text/css" href="css/3-1.css">
+<link rel="styleshiie" type="text/css" href="css/3-5.css">
 </head>
 <body>
+<%@ include file="/WEB-INF/jsp/menu_header.jsp" %>
 <div align="center" class="body">
 <table>
 	<tr><td><img alt="" src="img/${item.pictureUrl }"></td>

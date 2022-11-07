@@ -6,9 +6,10 @@
 <head>
 <meta charset="EUC-KR">
 <title>과일 목록 화면</title>
-<link rel="stylesheet" type="text/css" href="css/3-1.css">
+<link rel="stylesheet" type="text/css" href="css/3-5.css">
 </head>
 <body>
+<%@ include file="/WEB-INF/jsp/menu_header.jsp" %>
 <div align="center" class="body">
 	<h2>과일 목록 화면</h2>
 	<table border="1">

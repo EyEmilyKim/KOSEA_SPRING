@@ -8,9 +8,10 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인 화면</title>
-<link rel="stylesheet" type="text/css" href="css/3-3.css">
+<link rel="stylesheet" type="text/css" href="css/3-5.css">
 </head>
 <body>
+<%@ include file="/WEB-INF/jsp/menu_header.jsp" %>
 <div align="center" class="body">
 <form:form modelAttribute="user" method="post" action="login.html">
 <spring:hasBindErrors name="user">
@@ -35,6 +36,7 @@
 		<td align="center"><input type="reset" value="취 소" /></td></tr>
 </table>
 </form:form>
+<a href="">■ 신규 가입자 등록</a>
 </div>
 </body>
 </html>
