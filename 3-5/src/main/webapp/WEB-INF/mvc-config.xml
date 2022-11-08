@@ -37,6 +37,7 @@
 			</list>
 		</property>
 	</bean>
+	<bean id="userEntryValidator" class="util.UserEntryValidator"/>
 	<bean id="loginValidator" class="util.LoginValidator"/>
 	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

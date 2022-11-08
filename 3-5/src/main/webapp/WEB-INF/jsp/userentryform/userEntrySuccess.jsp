@@ -12,7 +12,6 @@
 <b><font color="red">가입이 완료되었습니다~</font></b>
 <table>
 	<tr height="40px"><th>가입자ID</th><td>${user.userId }</td></tr>
-	<tr height="40px"><th>암 호</th><td>${user.password }</td></tr>
 	<tr height="40px"><th>이 름</th><td>${user.userName }</td></tr>
 	<tr height="40px"><th>주 소</th><td>${user.address }</td></tr>
 	<tr height="40px"><th>이메일</th><td>${user.email }</td></tr>

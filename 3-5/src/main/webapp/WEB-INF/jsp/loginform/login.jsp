@@ -36,7 +36,7 @@
 		<td align="center"><input type="reset" value="취 소" /></td></tr>
 </table>
 </form:form>
-<a href="">■ 신규 가입자 등록</a>
+<a href="../userentryform/userEntry.html">■ 신규 가입자 등록</a>
 </div>
 </body>
 </html>
