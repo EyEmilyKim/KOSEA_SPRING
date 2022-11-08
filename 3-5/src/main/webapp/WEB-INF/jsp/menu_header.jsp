@@ -12,11 +12,11 @@
 				<c:when test="${ not empty loginUser }">
 					<font color="red">환영합니다~ <br/>
 					${loginUser.userId }님~<br/>
-					<a href="">■ 로그아웃 하기</a></font>
+					<a href="../logout/logout.html">■ 로그아웃 하기</a></font>
 				</c:when>
 				<c:when test="${empty loginUser }">
 					<font color="red">
-						<a href="">■ 로그인 하기</a>
+						<a href="../loginform/login.html">■ 로그인 하기</a>
 					</font>
 				</c:when>
 			</c:choose>
