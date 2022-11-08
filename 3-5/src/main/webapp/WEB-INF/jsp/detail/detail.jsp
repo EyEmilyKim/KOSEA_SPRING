@@ -11,7 +11,7 @@
 <%@ include file="/WEB-INF/jsp/menu_header.jsp" %>
 <div align="center" class="body">
 <table>
-	<tr><td><img alt="" src="img/${item.pictureUrl }"></td>
+	<tr><td><img alt="" src="../img/${item.pictureUrl }"></td>
 		<td align="center">
 			<table>
 			<tr height="50"><td width="80">상품명</td>
