@@ -22,5 +22,6 @@
 </table>
 </div>
 <div><br/>${message }<br/><br/></div>
+</div>
 </body>
 </html>

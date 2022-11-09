@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <title>과일 상세 정보</title>
 <link rel="styleshiie" type="text/css" href="css/3-5.css">
+<style type="text/css">
+#num {width:30px;} 
+</style>
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/menu_header.jsp" %>
@@ -24,11 +27,8 @@
 				<form action="../cart/cartAdd.html">
 				<input type="hidden" name="itemId" value="${item.itemId}"/>
 				<table>
-				<tr><td><select name="quantity">
-					<option>1</option><option>2</option>
-					<option>3</option><option>4</option>
-					<option>5</option><option>6</option>
-				</select>개</td>
+				<tr><td><input type="number" min="1" name="quantity" id="num" value="1"/>
+				개</td>
 					<td><input type="submit" value="카트에 담기"></td></tr>
 				</table>
 				</form>
