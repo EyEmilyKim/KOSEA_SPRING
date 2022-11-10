@@ -1,0 +1,4 @@
+itemMenu.title = 관리자 - 상품목록 화면
+itemAdd.title = 관리자 - 상품등록 화면
+itemDelete.title = 관리자 - 상품삭제 화면
+itemEdit.title = 관리자 - 상품변경 화면
