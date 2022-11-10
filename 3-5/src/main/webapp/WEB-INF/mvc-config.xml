@@ -28,7 +28,7 @@
 		<constructor-arg ref="sqlSessionFactory"></constructor-arg>
 	</bean>
 	<!-- DB 연동을 위한 SqlSession 객체 관련 설정 //끝 -->	
-	<context:component-scan base-package="dao,controller">
+	<context:component-scan base-package="dao, controller, service">
 	</context:component-scan>
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">

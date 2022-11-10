@@ -1,18 +1,17 @@
 package controller;
 
 import java.util.ArrayList;
-
 import javax.servlet.http.HttpSession;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import exception.CartEmptyException;
 import exception.LoginRequiredException;
 import model.Cart;
 import model.ItemSet;
 import model.User;
+import service.SaleCatalog;
 
 @Controller
 public class CheckoutController {
@@ -30,6 +29,9 @@ public class CheckoutController {
 		mav.addObject("loginUser", loginUser);
 		ArrayList<ItemSet> itemList = (ArrayList)cart.getItemList();
 		mav.addObject("itemList", itemList);
+		mav.addObject("totalAmount", saleCatalog.sumTotal(itemList));
 		return mav;
-	} 
+	}
+	@Autowired
+	private SaleCatalog saleCatalog;
 }

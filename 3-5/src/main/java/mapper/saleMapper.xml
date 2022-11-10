@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.sale">
-<insert id="putSaleDetail" parameterType="mode.SaleDetail">
-insert into mysweet_sale_detail value(#{saleId},#{detailId},#{itemId},#{quantity})
+<insert id="putSaleDetail" parameterType="model.SaleDetail">
+insert into mysweet_sale_detail values(#{saleId},#{saleDetailId},#{itemId},#{quantity})
 </insert>
 <insert id="putSale" parameterType="model.Sale">
 insert into mysweet_sale values(#{saleId},#{userId},sysdate)

@@ -17,7 +17,7 @@ public class SaleDAOimpl implements SaleDAO {
 	}
 
 	public void create(Sale sale) {
-		session.insert("mapper.sale.putSale");
+		session.insert("mapper.sale.putSale", sale);
 	}
 
 }
