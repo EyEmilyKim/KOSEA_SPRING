@@ -24,9 +24,9 @@
 	<tr class="record"><td align="center">${item.itemId }</td>
 		<td align="left">${item.itemName }</td>
 		<td align="right">
-		<fmt:formatNumber type="currency" currencySymbol="￦" value="${item.itemName }"/>원</td>
-		<td align="center"><a href="#">상품 편집</a></td>
-		<td align="center"><a href="#">상품 삭제</a></td></tr>
+		<fmt:formatNumber type="currency" currencySymbol="￦" value="${item.price }"/>원</td>
+		<td align="center"><a href="">상품 편집</a></td>
+		<td align="center"><a href="">상품 삭제</a></td></tr>
 	</c:forEach>
 </table>		
 </div>

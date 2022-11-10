@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.home">
-<select id="findItem" parameterType="String" resultType="modelItem">
+<select id="findItem" parameterType="String" resultType="model.Item">
 select item_id "itemId", item_name "itemName", price, description 
 from mysweet_fruits 
 where item_name like '%' || #{name} || '%'
