@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>과일 상세 정보</title>
-<link rel="styleshiie" type="text/css" href="css/3-5.css">
+<link rel="styleshiie" type="text/css" href="../css/3-5.css">
 <style type="text/css">
 #num {width:30px;} 
 </style>

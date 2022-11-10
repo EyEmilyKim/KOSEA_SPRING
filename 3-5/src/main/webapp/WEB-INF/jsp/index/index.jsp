@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>과일 목록 화면</title>
-<link rel="stylesheet" type="text/css" href="css/3-5.css">
+<link rel="stylesheet" type="text/css" href="../css/3-5.css">
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/menu_header.jsp" %>
