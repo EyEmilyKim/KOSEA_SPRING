@@ -26,6 +26,7 @@ where item_id = #{no}
 </select>
 <select id="getItems" resultType="model.Item">
 select item_id "itemId", item_name "itemName", price, 
-description, picture_url "pictureUrl" from mysweet_fruits
+description, picture_url "pictureUrl" from mysweet_fruits 
+order by item_id 
 </select>
 </mapper>

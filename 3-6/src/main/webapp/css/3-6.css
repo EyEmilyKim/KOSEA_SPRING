@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body {
+   font-family: '굴림체';
+}
+div.body{
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+tr.header{
+   background-color: ligntgreen;
+}
+tr.record{
+   background-color: lightblue;
+}
+input.userId{
+   height: 20px;
+   width: 150px;
+   border: 2px solid black;
+}
+input.password{
+   height: 20px;
+   width: 150px;
+   border: 2px solid black;
+}

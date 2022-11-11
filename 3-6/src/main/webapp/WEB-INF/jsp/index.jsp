@@ -8,7 +8,7 @@
 <title><spring:message code="itemMenu.title"/></title>
 </head>
 <body>
-<form:form method="post" action="serach.html">
+<form:form method="post" action="search.html">
 <div align="center" class="body">
 	<h2><spring:message code="itemMenu.title"/></h2>
 	상품명 검색<input type="text" name="itemName"/>
@@ -24,9 +24,9 @@
 	<tr class="record"><td align="center">${item.itemId }</td>
 		<td align="left">${item.itemName }</td>
 		<td align="right">
-		<fmt:formatNumber type="currency" currencySymbol="￦" value="${item.price }"/>원</td>
-		<td align="center"><a href="">상품 편집</a></td>
-		<td align="center"><a href="">상품 삭제</a></td></tr>
+		<fmt:formatNumber type="currency" currencySymbol="￦" pattern="#,###"  value="${item.price }"/>원</td>
+		<td align="center"><a href="edit.html?itemId=${item.itemId }">상품 편집</a></td>
+		<td align="center"><a href="confirm.html?itemId=${item.itemId }">상품 삭제</a></td></tr>
 	</c:forEach>
 </table>		
 </div>
