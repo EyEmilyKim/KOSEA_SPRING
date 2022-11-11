@@ -4,7 +4,14 @@
   <artifactId>mySweetHome</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  
+  <!-- 개발자가 추가함 //시작 -->
+  <repositories>
+ 	<repository>
+ 		<id>codelds</id>
+ 		<url>http://code.lds.org/nexus/content/groups/main-repo</url>
+ 	</repository>
+  </repositories>
+  <!-- 개발자가 추가함 //끝 -->
     <properties>
 
 		<!-- Generic properties -->
@@ -103,6 +110,72 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-
+		
+		<!-- 개발자가 추가함 (위쪽에는 기본으로 들어있는 것들) //시작 -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+		    <artifactId>ojdbc6</artifactId>
+		    <version>11.2.0.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>3.1.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<!-- 개발자가 추가함 (위쪽에는 기본으로 들어있는 것들) //끝 -->
+		<!-- 3-5에서 추가된 dependency 3개! //시작 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>2.5.6</version>
+		</dependency>
+		<dependency>
+			<groupId>aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+		<dependency>
+			<groupId>aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+		<!-- 3-5에서 추가된 dependency 3개! //끝 -->
+		<!-- 어노테이션 폼체크를 위한 라이브러리 추가 //시작 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.0.2GA</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
+		<!-- 어노테이션 폼체크를 위한 라이브러리 추가 //끝 -->
 	</dependencies>	
 </project>
