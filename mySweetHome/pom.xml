@@ -159,7 +159,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>4.0.2GA</version>
+			<version>4.0.2.GA</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-fileupload</groupId>
