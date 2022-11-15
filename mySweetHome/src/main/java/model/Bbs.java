@@ -1,9 +1,13 @@
 package model;
 
-public class BBS {
+import org.hibernate.validator.constraints.NotEmpty;
+
+public class Bbs {
 	private Integer seqno;
+	@NotEmpty(message="제목을 입력하세요.")
 	private String title;
 	private String writer;
+	@NotEmpty(message="내용을 입력하세요.")
 	private String content;
 	private String reg_date;
 	public String getReg_date() {

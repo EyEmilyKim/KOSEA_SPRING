@@ -60,7 +60,7 @@ function startClock(){
 </script>
 <header>
 	<h2 align="center">
- 	<a href="template.jsp"><img alt="" src="../imgs/logo.gif" id="main_image"/></a></h2>
+ 	<a href="../home/intro.html"><img alt="" src="../imgs/logo.gif" id="main_image"/></a></h2>
 </header>
 <section>
 	<table id="body">
@@ -79,8 +79,8 @@ function startClock(){
 				</div>
 				<div id="menu">
 					<a href="../home/intro.html?BODY=intro.jsp">■ 소개</a><br/>
-					<c:if test="${sessionScope.USERID != null }">
-						<a href="template.jsp?BODY=bbsInput.jsp">■ 게시글 작성</a><br/>
+					<c:if test="${sessionScope.LOGIN != null }">
+						<a href="../read/putBBS.html">■ 게시글 작성</a><br/>
 					</c:if>
 					<a href="../read/read.html">■ 게시글 목록</a><br/>
 					<c:if test="${sessionScope.MANAGER != null }">
