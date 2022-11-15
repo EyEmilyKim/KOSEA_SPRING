@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
@@ -10,66 +10,66 @@
 </head>
 <body>
 <div align="center">
-<h2>È¸¿ø Á¤º¸ ÀÔ·Â</h2>
-<form:form action="entryMember.do" method="post" name="fr"
+<h2>íšŒì› ì •ë³´ ì…ë ¥</h2>
+<form:form action="../entry/entry.html" method="post" name="fr"
 		onSubmit="return check(this)" modelAttribute="member">
 <input type="hidden" name="idChecked"/>
-ÀÌ ¸§ : <form:input path="name" /><br/>
-°è Á¤ : <form:input path="id" id="ID"/>
-<input type="button" value="Áßº¹ °Ë»ç" 
+ì´ ë¦„ : <form:input path="name" /><br/>
+ê³„ ì • : <form:input path="id" id="ID"/>
+<input type="button" value="ì¤‘ë³µ ê²€ì‚¬" 
 		onClick="idCheck()"/><br/>
-ÁÖ ¼Ò : <form:input path="addr"/><br/>
-¿¬¶ôÃ³ : <form:input path="tel"/><br/>
-¾Ï È£ : <form:input path="pwd"/><br/>
-¾ÏÈ£ È®ÀÎ : <input type="password" name="CONF"/><br/>
-¼º º° : ³²<form:radiobutton path="gender" value="M"/>,
-	¿©<form:radiobutton path="gender" value="F"/><br/>
-ÀÌ¸ŞÀÏ : <form:input path="email" /><br/>
-Á÷ ¾÷ : <form:select path="job">
-	<form:option value="--¼±ÅÃÇÏ¼¼¿ä--"/>
-	<form:option value="ÇĞ»ı"/>
-	<form:option value="È¸»ç¿ø"/>
-	<form:option value="±âÅ¸"/>
+ì£¼ ì†Œ : <form:input path="addr"/><br/>
+ì—°ë½ì²˜ : <form:input path="tel"/><br/>
+ì•” í˜¸ : <form:input path="pwd"/><br/>
+ì•”í˜¸ í™•ì¸ : <input type="password" name="CONF"/><br/>
+ì„± ë³„ : ë‚¨<form:radiobutton path="gender" value="M"/>,
+	ì—¬<form:radiobutton path="gender" value="F"/><br/>
+ì´ë©”ì¼ : <form:input path="email" /><br/>
+ì§ ì—… : <form:select path="job">
+	<form:option value="--ì„ íƒí•˜ì„¸ìš”--"/>
+	<form:option value="í•™ìƒ"/>
+	<form:option value="íšŒì‚¬ì›"/>
+	<form:option value="ê¸°íƒ€"/>
 		</form:select><br/><br/>
-<input type="submit" value="È¸¿ø °¡ÀÔ"/>
-<input type="reset" value="Ãë ¼Ò"/>
+<input type="submit" value="íšŒì› ê°€ì…"/>
+<input type="reset" value="ì·¨ ì†Œ"/>
 </form:form>
 </div>
 <script type="text/javascript">
 function idCheck(){
-	if(document.fr.id.value == ""){
-		alert("°èÁ¤À» ÀÔ·ÂÇÏ¼¼¿ä."); return;
+	if(document.fr.ID.value == ""){
+		alert("ê³„ì •ì„ ì…ë ¥í•˜ì„¸ìš”."); return;
 	}
-	var url="../idcheck/idchek.html?USER_ID="+document.fr.id.value;
+	var url="../idcheck/idcheck.html?USER_ID="+document.fr.id.value;
 	window.open(url,"_blank_","width=450,height=250");
 }
 function check(frm){
 	if(frm.name.value == ""){
-		alert("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä."); return false;
+		alert("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”."); return false;
 	}
 	if(frm.id.value == ""){
-		alert("°èÁ¤À» ÀÔ·ÂÇÏ¼¼¿ä."); return false;
+		alert("ê³„ì •ì„ ì…ë ¥í•˜ì„¸ìš”."); return false;
 	}
 	if(frm.idChecked.value == ""){
-		alert("°èÁ¤ Áßº¹°Ë»ç¸¦ ÇØÁÖ¼¼¿ä."); return false;
+		alert("ê³„ì • ì¤‘ë³µê²€ì‚¬ë¥¼ í•´ì£¼ì„¸ìš”."); return false;
 	}
 	if(frm.tel.value == ""){
-		alert("¿¬¶ôÃ³¸¦ ÀÔ·ÂÇÏ¼¼¿ä."); return false;
+		alert("ì—°ë½ì²˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”."); return false;
 	}
 	if(frm.pwd.value == ""){
-		alert("¾ÏÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä."); return false;
+		alert("ì•”í˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”."); return false;
 	}
 	if(frm.pwd.value != frm.CONF.value){
-		alert("¾ÏÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù."); return false;
+		alert("ì•”í˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤."); return false;
 	}
 	if( ! frm.gender[0].checked && 
 			! frm.gender[1].checked){
-		alert("¼ºº°À» ¼±ÅÃÇÏ¼¼¿ä."); return false;
+		alert("ì„±ë³„ì„ ì„ íƒí•˜ì„¸ìš”."); return false;
 	}
 	if(frm.job.selectedIndex < 1){
-		alert("Á÷¾÷À» ¼±ÅÃÇÏ¼¼¿ä."); return false;
+		alert("ì§ì—…ì„ ì„ íƒí•˜ì„¸ìš”."); return false;
 	}
-	if( ! confirm("°¡ÀÔÇÏ½Ã°Ú½À´Ï±î?")) return false;
+	if( ! confirm("ê°€ì…í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")) return false;
 }
 </script>
 </body>
