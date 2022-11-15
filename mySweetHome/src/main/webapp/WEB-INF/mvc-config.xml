@@ -18,6 +18,8 @@
     <context:component-scan base-package="controller,dao">
 	</context:component-scan>
 	
+	<bean id="fromTo" class="model.FromTo"/>
+	
 	<!-- DB 연동을 위한 SqlSession 객체 관련 설정 //시작 -->	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		p:driverClassName="oracle.jdbc.OracleDriver"
