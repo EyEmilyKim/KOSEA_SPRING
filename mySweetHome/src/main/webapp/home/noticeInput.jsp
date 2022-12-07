@@ -10,24 +10,26 @@
 </head>
 <body>
 <div align="center">
-<h2>게시판 글쓰기</h2>
-<form:form action="../read/entryBBS.html" method="post" 
-			modelAttribute="bbs" onSubmit="return check(this)">
+<h2>공지사항 쓰기</h2>
+<form:form action="../notice/noticeInput.html" method="post" 
+		modelAttribute="notice" onSubmit="return check()">
 	<table>
 		<tr><th>제 목</th>
 			<td><form:input path="title" size="20" placeHolder="제목을 입력하세요."/>
-				<font color="red"><form:errors path="title"/></font></td></tr>
+				<font color="red"><form:errors path="title"/></font>
+			</td></tr>
 		<tr><th>내 용</th>
-			<td><form:textarea rows="6" cols="40" path="content"></form:textarea>
-				<font color="red"><form:errors path="content"/></font></td></tr>
-		<tr><td colspan="2" align="center">
-			<input type="submit" value="글 올리기"/> 
+			<td><form:textarea rows="6" cols="40" path="content" placeHolder="내용을 입력하세요."></form:textarea>
+				<font color="red"><form:errors path="content"/></font>
+			</td></tr>
+		<tr><td colspan="2" align="center"><input type="submit"
+			value="공지글 올리기"/> 
 			<input type="reset" value="취 소"/></td></tr>
 	</table>
 </form:form>
 </div>
 <script type="text/javascript">
-function check(fm){
+function check(){
 // 	if(fm.TITLE.value == ''){
 // 		alert("제목을 입력하세요."); return false;
 // 	}else{
@@ -48,12 +50,3 @@ function check(fm){
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

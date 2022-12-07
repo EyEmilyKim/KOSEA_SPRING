@@ -31,7 +31,12 @@ public class LoginController {
 			mav.addObject("NOID","YES");
 		}else { //pwd 검색됨
 			if(pwd.equals(member.getPwd())) { //암호 일치, 로그인 성공!
-				session.setAttribute("LOGIN", member.getId());
+				//일반 사용자인 경우, 관리자인 경우 구분
+				if(member.getId().equals("manager")) {
+					session.setAttribute("MANAGER", member.getId());
+				}else {
+					session.setAttribute("LOGIN", member.getId());
+				}
 			}else { //암호 불일치
 				mav.addObject("NOPWD","YES");
 			}

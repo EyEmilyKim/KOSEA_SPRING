@@ -3,6 +3,32 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.home">
 
+<select id="getNoticeDetail" parameterType="Integer" resultType="model.Notice">
+select seqno, title, writer, 
+to_char(reg_date, 'yyyy-mm-dd HH:MI:SS') "reg_date", content 
+from mysweet_notice where seqno = #{id}
+</select>
+
+<select id="getNoticeCount" resultType="Integer">
+select count(*) from mysweet_notice
+</select>
+
+<select id="getAllNotice" parameterType="model.FromTo" resultType="model.Notice">
+select seqno, title, writer, r_date "reg_date"
+from (select rownum rn, seqno, title, writer, r_date
+from (select seqno, title, writer, to_char(reg_date, 'yyyy-mm-dd') r_date
+from mysweet_notice order by seqno desc))
+where rn > #{start} and rn <![CDATA[<]]> #{end}
+</select>
+
+<insert id="putNotice" parameterType="model.Notice">
+insert into mysweet_notice values(
+#{seqno},#{title},#{writer},sysdate,#{content})
+</insert>
+<select id="getMaxNoticeNo" resultType="Integer">
+select max(seqno) from mysweet_notice
+</select>
+
 <insert id="putBBS" parameterType="model.Bbs" >
 insert into mysweet_bbs values(#{seqno},#{title},#{writer},sysdate,#{content})
 </insert>
