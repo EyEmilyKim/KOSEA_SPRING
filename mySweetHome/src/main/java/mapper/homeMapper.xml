@@ -3,6 +3,23 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.home">
 
+<select id="getAllItems" parameterType="model.FromTo" resultType="model.Item">
+select code, name, price, r_date "reg_date"
+from (select rownum rn, code, name, price, r_date
+from (select code, name, price, to_char(reg_date, 'yyyy-mm-dd') r_date
+from mysweet_items order by r_date desc ))
+where rn > #{start} and rn <![CDATA[<]]> #{end}
+
+</select>
+<insert id="putItem" parameterType="model.Item">
+insert into mysweet_items values(
+#{code},#{name},#{price},#{info},sysdate)
+</insert>
+
+<select id="checkItemCode" parameterType="String" resultType="Integer">
+select count(*) from mysweet_items where code = #{id}
+</select>
+
 <update id="updateNotice" parameterType="model.Notice">
 update mysweet_notice set 
 title = #{title}, content = #{content} 

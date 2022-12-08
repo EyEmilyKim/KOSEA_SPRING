@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" 
 	prefix="c" %>    
 <!DOCTYPE html>
@@ -10,14 +10,14 @@
 </head>
 <body>
 <form action="../logout/logout.html">
-х╞©╣гу╢о╢ы~ 
+М≥≤Л≤│М∙╘К▀┬К▀╓~ 
 	<c:if test="${sessionScope.LOGIN != null }">
-		${sessionScope.LOGIN}╢т~<br/>
+		${sessionScope.LOGIN}К▀≤~<br/>
 	</c:if>
 	<c:if test="${sessionScope.MANAGER != null }">
-		${sessionScope.MANAGER}╢т~<br/>
+		${sessionScope.MANAGER}К▀≤~<br/>
 	</c:if>	
-	<input type="submit" value="╥н╠в ╬ф©Т"/>
+	<input type="submit" value="К║°Й╥╦ Л∙└Л⌡┐"/>
 </form>
 </body>
 </html>

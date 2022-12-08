@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" 
 		prefix="c" %>    
 <!DOCTYPE html>
@@ -12,14 +12,14 @@
 <div align="center">
 <c:choose>
 	<c:when test="${NOID == 'YES' }">
-		<h3 align="center">°èÁ¤ÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.</h3>
+		<h3 align="center">ê³„ì •ì´ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.</h3>
 	</c:when>
 	<c:when test="${NOPWD == 'YES' }">
-		<h3 align="center">¾ÏÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.</h3>
+		<h3 align="center">ì•”í˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.</h3>
 	</c:when>
 	<c:otherwise>
-		<h3 align="center">·Î±×ÀÎ µÇ¾ú½À´Ï´Ù.</h3>
-		<h3 align="center">È¯¿µÇÕ´Ï´Ù~ ${sessionScope.LOGIN }´Ô~</h3>
+		<h3 align="center">ë¡œê·¸ì¸ ë˜ì—ˆìŠµë‹ˆë‹¤.</h3>
+		<h3 align="center">í™˜ì˜í•©ë‹ˆë‹¤~ ${sessionScope.LOGIN }ë‹˜~</h3>
 	</c:otherwise>
 </c:choose>
 </div>

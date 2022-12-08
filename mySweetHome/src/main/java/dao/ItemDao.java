@@ -1,0 +1,12 @@
+package dao;
+
+import java.util.List;
+
+import model.FromTo;
+import model.Item;
+
+public interface ItemDao {
+	Integer checkItemCode(String code);
+	void putItem(Item item);
+	List<Item> getAllItems(FromTo ft);
+}

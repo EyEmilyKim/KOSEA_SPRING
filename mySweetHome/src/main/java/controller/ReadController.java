@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import dao.BbsDao;
+import dao.ItemDao;
 import dao.NoticeDao;
 import model.Bbs;
+import model.FromTo;
+import model.Item;
 import model.Notice;
 
 @Controller
@@ -22,6 +25,8 @@ public class ReadController {
 	private BbsDao bbsDao;
 	@Autowired
 	private NoticeDao noticeDao;
+	@Autowired
+	private ItemDao itemDao;
 	
 	@RequestMapping(value="/read/entryBBS.html")
 	public ModelAndView entryBBS(@Valid Bbs bbs, BindingResult br, HttpSession session) {
@@ -93,6 +98,31 @@ public class ReadController {
 		mav.addObject("PAGES", pageCount); //페이지 수 
 		mav.addObject("LIST", noticeList); //게시글 목록
 		mav.addObject("BODY", "noticeList.jsp"); 
+		return mav;
+	} 
+	
+	@RequestMapping(value="/read/readItems.html")
+	public ModelAndView readItems(Integer pageNo) {
+		int currentPage = 0;
+		if(pageNo == null) currentPage = 1;
+		else currentPage = pageNo;
+		int start = (currentPage - 1)* 5;
+		int end = ((currentPage - 1)* 5) + 6;
+		FromTo ft = new FromTo();
+		ft.setStart(start);
+		ft.setEnd(end);
+		List<Item> itemList = itemDao.getAllItems(ft);
+//		Integer totalCount = noticeDao.getNoticeCount();
+//		if(end > totalCount) end = totalCount + 1;
+//		int pageCount = totalCount / 5;
+//		if(totalCount % 5 > 0) pageCount++;
+		ModelAndView mav = new ModelAndView("home/template");
+//		mav.addObject("START", start+1); // 
+//		mav.addObject("END", end-1); //
+//		mav.addObject("TOTAL", totalCount); //전체 게시글 수 
+//		mav.addObject("PAGES", pageCount); //페이지 수 
+		mav.addObject("ITEMS", itemList); //아이템 목록
+		mav.addObject("BODY", "itemList.jsp"); 
 		return mav;
 	} 
 }

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
@@ -11,15 +11,15 @@
 </head>
 <body>
 <div align="right">
-<a href="../home/userentry.html">°¡ÀÔÇÏ±â</a></div>
+<a href="../home/userentry.html">ê°€ìž…í•˜ê¸°</a></div>
 <form:form action="../login/template.html" method="post"
 	modelAttribute="member">
-°èÁ¤ : <form:input path="id" size="15" placeHolder="°èÁ¤À» ÀÔ·ÂÇÏ¼¼¿ä."/>
+ê³„ì • : <form:input path="id" size="15" placeHolder="ê³„ì •ì„ ìž…ë ¥í•˜ì„¸ìš”."/>
 	<font color="red"><form:errors path="id"/></font><br/>
-¾ÏÈ£ : <form:password path="pwd" size="15"/>
+ì•”í˜¸ : <form:password path="pwd" size="15"/>
 	<font color="red"><form:errors path="pwd"/></font><br/>
-<input type="submit" value="·Î±×ÀÎ"/>
-<input type="reset" value="Ãë ¼Ò"/>
+<input type="submit" value="ë¡œê·¸ì¸"/>
+<input type="reset" value="ì·¨ ì†Œ"/>
 </form:form>
 
 </body>
