@@ -13,7 +13,7 @@
 <body>
 <div align="center">
 	<h3>공지글 상세보기</h3>
-	<form:form action="modifyNotice.do" method="post"
+	<form:form action="../notice/modify.html" method="post"
 			modelAttribute="notice" onSubmit="return check(this)">
 	<table width="100%">
 	<tr><th>글번호</th>

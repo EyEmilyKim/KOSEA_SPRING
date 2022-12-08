@@ -47,4 +47,12 @@ public class NoticeDaoImpl implements NoticeDao {
 		return notice;
 	}
 
+	public void deleteNotice(Integer seqno) {
+		session.delete("mapper.home.deleteNotice", seqno);
+	}
+
+	public void updateNotice(Notice notice) {
+		session.delete("mapper.home.updateNotice", notice);
+	}
+
 }

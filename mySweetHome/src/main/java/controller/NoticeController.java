@@ -50,4 +50,15 @@ public class NoticeController {
 	}
 	
 	
+	@RequestMapping(value="/notice/modify.html", method=RequestMethod.POST)
+	public ModelAndView modify(Notice notice, String BTN) {
+		if(BTN.equals("삭 제")) {
+			this.noticeDao.deleteNotice(notice.getSeqno());
+		}else if(BTN.equals("수 정")) {
+			this.noticeDao.updateNotice(notice);
+		}
+		return new ModelAndView("redirect:/read/readNotice.html");
+	}
+	
+	
 }
