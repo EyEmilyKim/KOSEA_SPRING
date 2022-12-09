@@ -3,6 +3,15 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.home">
 
+<select id="getItemByCode" parameterType="String" resultType="model.Item">
+select code, name, price, to_char(reg_date, 'YYYY-MM-DD HH:MI:SS') "reg_date", info 
+from mysweet_items where code = #{code} 
+</select>
+
+<select id="getItemsCount" resultType="Integer">
+select count(*) from mysweet_items
+</select>
+
 <select id="getAllItems" parameterType="model.FromTo" resultType="model.Item">
 select code, name, price, r_date "reg_date"
 from (select rownum rn, code, name, price, r_date

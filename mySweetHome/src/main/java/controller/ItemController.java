@@ -45,7 +45,15 @@ public class ItemController {
 		}
 		this.itemDao.putItem(item); //상품정보 등록
 		return new ModelAndView("redirect:/read/readItems.html");
-		
-		
 	}
+	
+	@RequestMapping(value="/item/detail.html", method=RequestMethod.GET)
+	public ModelAndView detail(String SEQ) {
+		ModelAndView mav = new ModelAndView("home/template");
+		Item item = itemDao.getItemByCode(SEQ);
+		mav.addObject("ITEM",item);
+		mav.addObject("BODY","itemDetail.jsp");
+		return mav;
+	}
+	
 }

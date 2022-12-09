@@ -112,15 +112,15 @@ public class ReadController {
 		ft.setStart(start);
 		ft.setEnd(end);
 		List<Item> itemList = itemDao.getAllItems(ft);
-//		Integer totalCount = noticeDao.getNoticeCount();
+		Integer itemCount = itemDao.getItemsCount();
+		int pageCount = itemCount / 5;
+		if(itemCount % 5 > 0) pageCount++;
 //		if(end > totalCount) end = totalCount + 1;
-//		int pageCount = totalCount / 5;
-//		if(totalCount % 5 > 0) pageCount++;
 		ModelAndView mav = new ModelAndView("home/template");
 //		mav.addObject("START", start+1); // 
 //		mav.addObject("END", end-1); //
 //		mav.addObject("TOTAL", totalCount); //전체 게시글 수 
-//		mav.addObject("PAGES", pageCount); //페이지 수 
+		mav.addObject("PAGES", pageCount); //페이지 수 
 		mav.addObject("ITEMS", itemList); //아이템 목록
 		mav.addObject("BODY", "itemList.jsp"); 
 		return mav;

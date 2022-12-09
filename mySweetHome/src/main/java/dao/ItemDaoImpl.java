@@ -26,4 +26,13 @@ public class ItemDaoImpl implements ItemDao {
 		return session.selectList("mapper.home.getAllItems", ft);
 	}
 
+	public Integer getItemsCount() {
+		return session.selectOne("mapper.home.getItemsCount");
+	}
+
+	public Item getItemByCode(String code) {
+		Item item = session.selectOne("mapper.home.getItemByCode", code);
+		return item;
+	}
+
 }

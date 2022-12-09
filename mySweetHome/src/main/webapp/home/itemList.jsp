@@ -19,7 +19,7 @@
 		<th>등록일</th><th></th></tr>
 	<c:forEach items="${ITEMS }" var="item">
 	<tr><td>${item.code }</td>
-		<td><a href="itemDetail.do?SEQ=${item.code }">${item.name }</a></td>
+		<td><a href="../item/detail.html?SEQ=${item.code }">${item.name }</a></td>
 		<td><fmt:formatNumber
 			groupingUsed="true">${item.price }</fmt:formatNumber></td>
 		<td>${item.reg_date }</td>
@@ -28,7 +28,7 @@
 	</c:forEach>
 	</table>
 	<c:forEach begin="1" end="${PAGES }" var="page">
-		<a href="itemList.do?PAGE=${page }">${page }</a>
+		<a href="../read/readItems.html?pageNo=${page }">${page }</a>
 	</c:forEach>
 </c:if>
 </div>
