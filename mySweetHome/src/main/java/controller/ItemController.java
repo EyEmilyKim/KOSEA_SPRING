@@ -51,9 +51,18 @@ public class ItemController {
 	public ModelAndView detail(String SEQ) {
 		ModelAndView mav = new ModelAndView("home/template");
 		Item item = itemDao.getItemByCode(SEQ);
-		mav.addObject("ITEM",item);
+		mav.addObject(item);
 		mav.addObject("BODY","itemDetail.jsp");
 		return mav;
 	}
 	
+	@RequestMapping(value="/item/modify.html", method=RequestMethod.POST)
+	public ModelAndView modify(Item item, String BTN) {
+		if(BTN.equals("삭제")) {
+			itemDao.deleteItem(item.getCode());
+		}else if(BTN.equals("수정")) {
+			itemDao.updateItem(item);
+		}
+		return new ModelAndView("redirect:/read/readItems.html"); //상품 목록 매핑;
+	}
 }

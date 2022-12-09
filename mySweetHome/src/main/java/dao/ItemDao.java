@@ -11,4 +11,6 @@ public interface ItemDao {
 	List<Item> getAllItems(FromTo ft);
 	Integer getItemsCount();
 	Item getItemByCode(String code);
+	void deleteItem(String code);
+	void updateItem(Item item);
 }

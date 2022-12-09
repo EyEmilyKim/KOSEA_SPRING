@@ -35,4 +35,12 @@ public class ItemDaoImpl implements ItemDao {
 		return item;
 	}
 
+	public void deleteItem(String code) {
+		session.delete("mapper.home.deleteItem", code);
+	}
+
+	public void updateItem(Item item) {
+		session.update("mapper.home.updateItem", item);
+	}
+
 }
