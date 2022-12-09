@@ -24,7 +24,7 @@
 			groupingUsed="true">${item.price }</fmt:formatNumber></td>
 		<td>${item.reg_date }</td>
 		<td><a href="#"
-			onClick="window.open('addCart.do?CODE=${item.code }','my_cart','width=400,height=300,top=200,left=200')">장바구니 담기</a></td>
+			onClick="window.open('../cart/addCart.html?CODE=${item.code }','my_cart','width=400,height=300,top=200,left=200')">장바구니 담기</a></td>
 	</c:forEach>
 	</table>
 	<c:forEach begin="1" end="${PAGES }" var="page">

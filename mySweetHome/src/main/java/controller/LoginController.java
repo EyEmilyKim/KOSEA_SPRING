@@ -51,4 +51,25 @@ public class LoginController {
 		request.setAttribute("member",	new Member());
 		return mav;
 	}
+	
+	@RequestMapping(value="/login/cart.html")
+	public ModelAndView loginCart(@Valid Member member, BindingResult br, HttpSession session) {
+		ModelAndView mav = new ModelAndView("home/loginCart");
+		if(br.hasErrors()) {
+			mav.getModel().putAll(br.getModel());
+			return mav;
+		}
+		mav = new ModelAndView("home/loginCartResult");
+		String pwd = loginDao.getPwd(member.getId());
+		if(pwd == null) { //계정이 없는 경우
+			mav.addObject("NOID","YES");
+		}else { //계정 존재
+			if(pwd.equals(member.getPwd())) { //로그인 성공
+				session.setAttribute("LOGIN", member.getId());
+			}else { //암호가 일치하지 않는 경우
+				mav.addObject("NOPWD","YES");
+			}
+		}
+		return mav;
+	}
 }

@@ -15,7 +15,7 @@
 </c:if>
 <div align="right">
 <a href="../home/userentry.html">가입하기</a></div>
-<form:form action="../login/template.html" method="post"
+<form:form action="../login/cart.html" method="post"
 	modelAttribute="member">
 계정 : <form:input path="id" size="15" placeHolder="계정을 입력하세요."/>
 	<font color="red"><form:errors path="id"/></font><br/>
