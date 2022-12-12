@@ -92,4 +92,18 @@ public class Cart {
 		}
 	}
 	
+	public void addCart(String code, Integer num) {
+		//code를 codeList에 넣기 전에, 이미  codeList에 있는지 검사
+		for(int cnt=0; cnt<codeList.size(); cnt++) {
+			if(codeList.get(cnt).equals(code)) {
+				int number = numList.get(cnt);
+				number = number + num; //갯수 증가
+				numList.set(cnt, number);
+				System.out.println("갯수만 증가");
+				return; //메서드 종료
+			} //있으면 numList에서 갯수만 증가
+		} //없으면
+		
+		
+	}
 }

@@ -3,6 +3,13 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.home">
 
+<select id="getMaxCartSeqno" resultType="Integer">
+select max(seqno) from mysweet_cart
+</select>
+<insert id="putCart" parameterType="model.Item">
+insert into mysweet_cart values(#{seqno},#{id},#{code},#{num})
+</insert>
+
 <select id="getCartItem" parameterType="String" resultType="model.CartItem">
 select code, name, price from mysweet_items 
 where code=#{code}

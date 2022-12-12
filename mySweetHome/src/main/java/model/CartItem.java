@@ -1,12 +1,18 @@
 package model;
 
 public class CartItem {
+	private Integer seqno; //일련번호 
 	private String code; //상품번호
 	private String name; //상품이름
 	private Integer price; //가격
 	private Integer num; //갯수
 	private String id; //계정
-	
+	public Integer getSeqno() {
+		return seqno;
+	}
+	public void setSeqno(Integer seqno) {
+		this.seqno = seqno;
+	}
 	public String getCode() {
 		return code;
 	}
@@ -37,5 +43,6 @@ public class CartItem {
 	public void setId(String id) {
 		this.id = id;
 	}
+	
 	
 }
