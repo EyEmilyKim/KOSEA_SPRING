@@ -75,4 +75,21 @@ public class Cart {
 		this.codeList.add(index, code);
 	}
 	
+	public void deleteItem(String code, String id) {
+		for(int cnt = 0; cnt<codeList.size(); cnt++) {
+			codeList.remove(cnt); //cnt번째 상품번호 삭제
+			numList.remove(cnt); //cnt번째 상품갯수 삭제
+			return; //메서드 종료
+		} //상품번호가 일치하는 경우
+	}
+	
+	public void modifyItem(String code, String id, Integer num) {
+		for(int cnt=0; cnt<codeList.size(); cnt++) {
+			if(codeList.get(cnt).equals(code)) {
+				numList.set(cnt, num); //cnt번째 갯수를 num으로 변경
+				return; //메서드 종료
+			} //상품번호가 일치하는 경우, 갯수를 바꾼다.
+		}
+	}
+	
 }

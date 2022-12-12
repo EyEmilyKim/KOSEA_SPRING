@@ -25,7 +25,7 @@
 		<th>상품갯수</th>
 		<th>합 계</th><th>수정/삭제</th></tr>
 	<c:forEach items="${CARTLIST }" var="item">
-	<form action="cartModify.do" method="post">
+	<form action="../cart/modify.html" method="post">
 	<input type="hidden" name="CODE" value="${item.code }"/>
 	<tr><td>${item.code }</td><td>${item.name }</td>
 		<td><fmt:formatNumber groupingUsed="true">${item.price }</fmt:formatNumber></td>
